@@ -1,0 +1,21 @@
+pipeline {
+    agent any
+    stages{
+
+        stage('Create Cloudformation Stack') {
+
+            steps {
+
+                script {
+
+                    sh "aws cloudformation create-stack --stack-name NeilEksCloudformation --template-body file://eks.yaml --region us-east-1"
+
+                }
+
+            }
+
+        }
+
+    }
+
+} 
