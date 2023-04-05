@@ -8,7 +8,7 @@ pipeline {
 
                 script {
 
-                    sh "aws cloudformation create-stack --stack-name NeilEksCloudformation --template-body file://eks.yaml --region us-east-1"
+                    sh "aws cloudformation create-stack --stack-name Neil-EKS-Cloudformation --template-body file://eks.yaml --region us-east-1"
 
                 }
 
