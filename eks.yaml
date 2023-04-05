@@ -6,7 +6,7 @@ Resources:
       Name: neilcluster
       Version: "1.25"
       RoleArn: arn:aws:iam::388328004932:role/AWSEKSRole
-      ResourcesVpcConfig: null
+      ResourcesVpcConfig: 
       SecurityGroupIds:
         - sg-0d8315f2e7a43714e
       SubnetIds:
