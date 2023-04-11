@@ -18,7 +18,6 @@ Resources:
           - 0.0.0.0/0
   Nodegroup:
     Type: AWS::EKS::Nodegroup
-    DependsOn: Cluster
     Properties:
       ClusterName: neilcluster
       NodegroupName: neilnodegroup
