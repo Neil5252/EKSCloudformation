@@ -16,4 +16,21 @@ Resources:
         EndpointPrivateAccess: false
         PublicAccessCidrs:
           - 0.0.0.0/0
+Nodegroup:
+  Type: AWS::EKS::Nodegroup
+  DependsOn: Cluster
+  Properties:
+    ClusterName: neilcluster
+    NodegroupName: neilnodegroup
+    InstanceTypes:
+      - t2.micro
+    DiskSize: 8
+    NodeRole: arn:aws:iam::388328004932:role/eks-node-group
+    ScalingConfig:
+      MinSize: 2
+      DesiredSize: 3
+      MaxSize: 4
+    Subnets:
+      - subnet-0d43564d38acc22e5
+      - subnet-0b7a5cbdc6acb38dc
 
