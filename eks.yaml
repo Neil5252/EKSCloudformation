@@ -17,7 +17,7 @@ Resources:
         PublicAccessCidrs:
           - 0.0.0.0/0
 Nodegroup:
-  Type: AWS::EKS::NodeGroup
+  Type: AWS::EKS::Nodegroup
   DependsOn: Cluster
   Properties:
     ClusterName: neilcluster
