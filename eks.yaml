@@ -3,7 +3,7 @@ Resources:
   Cluster:
     Type: AWS::EKS::Cluster
     Properties:
-      Name: neilcluster
+      Name: neilcluster1
       Version: "1.25"
       RoleArn: arn:aws:iam::388328004932:role/AWSEKSRole
       ResourcesVpcConfig:
@@ -17,7 +17,7 @@ Resources:
     DependsOn: Cluster
     Properties:
       ClusterName: neilcluster
-      NodegroupName: neilnodegroup
+      NodegroupName: neilnodegroup1
       InstanceTypes:
         - t2.micro
       DiskSize: 8
